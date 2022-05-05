@@ -12,16 +12,20 @@
 
 #include <iostream>
 #include <cctype>
-using namespace std;
 
 int main(int ac, char **av){
     if (ac == 1)
+    {
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *"<< std::endl;
         return(0);
-        cout<<av[0];
+    }
     for(int i=1; i < ac ; i++)
     {
-        for(int j=0; av[i]; j++)
-            av[i][j] = toupper(av[i][j]);
-        cout << av[i];
+        std::string s(av[i]);
+        for(int j=0; (int)s.length() > j; j++)
+            s[j] = toupper(s[j]);
+        std :: cout << s << " ";
     }
+    std::cout << std::endl;
+    return 0;
 }
