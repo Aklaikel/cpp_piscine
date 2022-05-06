@@ -21,10 +21,9 @@ int main(int ac, char **av){
     }
     for(int i=1; i < ac ; i++)
     {
-        std::string s(av[i]);
-        for(int j=0; (int)s.length() > j; j++)
-            s[j] = toupper(s[j]);
-        std :: cout << s << " ";
+        for(int j=0; av[i][j]; j++)
+            av[i][j] = toupper(av[i][j]);
+        std :: cout << av[i] << " ";
     }
     std::cout << std::endl;
     return 0;
