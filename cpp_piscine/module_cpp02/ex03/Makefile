@@ -1,4 +1,4 @@
-NAME = Fixed
+NAME = Bsp
 CC = c++
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
